@@ -1,0 +1,51 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(35, 33, 33);
+}
+
+canvas {
+  height: 350px;
+  width: 350px;
+  background-color: #1b1919;
+  border-radius: 50%;
+  display: inline-block;
+  z-index: 80;
+}
+
+#knob {
+  position: absolute;
+  margin-left: -1000px;
+  z-index: 100;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #6a337a;
+  border-radius: 50%;
+  box-shadow: inset -2px 2px 0px 0px rgba(#fff, 0.1),
+    inset 2px -2px 0px 0px rgba(#111, 0.2), -5px 5px 5px 0px #111,
+    -10px 10px 10px -5px #111, -20px 20px 20px -10px #111,
+    -25px 25px 25px -10px #111;
+}
+
+#knob::after {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  width: 25%;
+  height: 4px;
+  margin-top: -2px;
+  background-color: #fefefe;
+  border-radius: 2px;
+  transition: all 200ms ease-in-out;
+  transform: rotate(-45deg);
+  transform-origin: -100% 50%;
+  box-shadow: 1px -1px 0px 0px rgba(#111, 0.2);
+  content: "";
+}
