@@ -126,6 +126,10 @@ function setup() {
     }
   }
   push(); 
+    fill(255, 204, 0);
+    noStroke(); 
+    circle(canvWidth/2, canvWidth/5, 150);
+    noFill(); 
     strokeWeight(2); 
     stroke(51);
     line(canvWidth/2-100, canvWidth/2, canvWidth/2+100, canvWidth/2);
